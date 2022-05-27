@@ -1,0 +1,12 @@
+virtual/
+*.pyc
+pycache/
+SECRET_KEY='0uXSBHidnyhfUMFPNt1USMJ7V2mkGI8V'
+DEBUG=True #set to false in production
+DB_NAME='tribune'
+DB_USER='moringa'
+DB_PASSWORD='james'
+DB_HOST='127.0.0.1'
+MODE='dev' #set to 'prod' in production
+ALLOWED_HOSTS='.localhost', '.herokuapp.com', '.127.0.0.1'
+DISABLE_COLLECTSTATIC=1
