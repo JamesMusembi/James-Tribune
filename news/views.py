@@ -1,8 +1,8 @@
 from django.shortcuts import render,redirect
-from django.http import HttpResponse, Http404
 import datetime as dt
 from .models import Article
 from .forms import NewsLetterForm
+from django.http import HttpResponse, Http404,HttpResponseRedirect
 
 # Create your views here.
 def news_today(request):
