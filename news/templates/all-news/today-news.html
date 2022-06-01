@@ -40,4 +40,17 @@
   </div>
   <!-Some code below--->
   {% endfor %}
+  <!-- Some content here-->
+
+<!-- Looping through news end   -->
+<div class="container-fluid">
+
+  <form  action="{%url 'newsToday'%}" method="post">
+    {%csrf_token%}
+
+    {% bootstrap_form letterForm layout='inline' %}
+    <input type="submit" value="Subscribe">
+  </form>
+
+</div>
 {% endblock %}
