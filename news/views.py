@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 import datetime as dt
-from .models import Article
+from .models import Article, NewsLetterRecipients
 from .forms import NewsLetterForm
 from django.http import HttpResponse, Http404,HttpResponseRedirect
 
@@ -8,7 +8,6 @@ from django.http import HttpResponse, Http404,HttpResponseRedirect
 def news_today(request):
     date = dt.date.today()
     news = Article.todays_news()
-    
     
     if request.method == 'POST':
         form = NewsLetterForm(request.POST)
