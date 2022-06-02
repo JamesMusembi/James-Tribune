@@ -33,7 +33,8 @@ class Article(models.Model):
     tags = models.ManyToManyField(tags)
     pub_date = models.DateTimeField(auto_now_add=True)
     article_image = models.ImageField(upload_to='articles/', blank=True)
-
+    editor = models.ForeignKey(User,on_delete=models.CASCADE) 
+    
     def __str__(self):
         return self.title
     @classmethod
